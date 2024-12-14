@@ -1,0 +1,415 @@
+<html>
+
+<head>
+  <title>Declaration Form</title>
+  <style>
+    @media print {
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: 0px 0px 0px 0px;
+      line-height: 1;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-weight: 100;
+      margin-bottom: 5px;
+    }
+
+    .form-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .form-table td,
+    .form-table th {
+      border: 1px solid #000;
+      padding: 5px;
+      font-size: smaller !important;
+    }
+
+    .form-table th {
+      text-align: left;
+    }
+
+    .form-table input {
+      width: 100%;
+      border: none;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .form-table .small-input {
+      width: 50px;
+    }
+
+    .form-table .medium-input {
+      width: 100px;
+    }
+
+    .form-table .large-input {
+      width: 200px;
+    }
+
+    .signature-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .signature-section div {
+      width: 45%;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .footer-table td,
+    .footer-table th {
+      border: 1px solid #000;
+      padding: 5px;
+    }
+
+    .footer-table th {
+      text-align: left;
+    }
+
+    .footer-table .photo {
+      height: 100px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .row>div {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <table class="header-table" style="border: 0">
+        <tr>
+          <td class="logo" style="border: 0">
+            <img
+              src=" data:image/png;base64,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"
+              alt="" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="row">
+      <div style="width: 60%">
+        <div class="section-title">(A) Insured Person's Particulars</div>
+        <table class="form-table">
+          <tr>
+            <td>1. Insurance No.</td>
+            <td colspan="3">$insurance_number</td>
+          </tr>
+          <tr>
+            <td>
+              2. Name<br />
+              (in block capital)
+            </td>
+            <td colspan="3">$candidate_name</td>
+          </tr>
+          <tr>
+            <td>3. Father's/ <br />Husband's Name</td>
+            <td colspan="3">$father_or_husband_name</td>
+          </tr>
+          <tr>
+            <td rowspan="2" style="width: 25%">4. Date of Birth</td>
+            <td rowspan="2" style="width: 25%">$DOB</td>
+            <td style="width: 25%">5. Marital Status</td>
+            <td style="width: 25%">$marital_status</td>
+          </tr>
+          <tr>
+            <td style="width: 25%">6. Sex</td>
+            <td style="width: 25%">$gender</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="height: 100px">
+              7. Present Address <br />$present_address<br />$present_city
+              <br />
+              Pin: $present_pin_code<br />
+              e-mail address: $email
+            </td>
+            <td colspan="2" style="height: 100px">
+              8. Permanent Address
+              <br />$permanent_address<br />$permanent_city
+              <br />
+              Pin: $permanent_pin_code<br />
+              e-mail address: $email
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Branch office: $branch_office</td>
+            <td colspan="2">Dispensary: $dispensery</td>
+          </tr>
+        </table>
+      </div>
+      <div style="width: 40%">
+        <div style="font-size: 12px">(B) Employer's Particulars</div>
+        <table class="form-table">
+          <tr>
+            <td rowspan="2">10. Date of Appointment</td>
+            <td>Day Month Year</td>
+          </tr>
+          <tr>
+            <td>$date_of_appointment</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="height: 65px">
+              11. Name & Address of the employer
+              <br />$name_address_of_employer
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              12. In case of any previous employment please fill up the
+              details as under:
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 50%">Previous Ins. No.:</td>
+            <td style="width: 50%">$previous_insurance_number</td>
+          </tr>
+          <tr>
+            <td style="width: 50%">Empls. Code No.:</td>
+            <td style="width: 50%">$previous_employer_code_number</td>
+          </tr>
+          <tr>
+            <td colspan="2">13. Name & Address of the employer:</td>
+          </tr>
+          <tr style="height: 50px">
+            <td colspan="2">$name_address_of_employer</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="section">
+      <p style="font-size: 9px">
+        (C) Details of the nominee u/s 71 of ESI Act1948 / Rule 56(2) of ESI
+        (Central) Rules 1950 for payment of cash benefit in the event of death
+      </p>
+      <table class="form-table">
+        <tr>
+          <th>Name of the Nominee</th>
+          <th>Relationship with insured person</th>
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td style="height: 20px">$name_of_nominee</td>
+          <td>$relationship_with_insured_person</td>
+          <td>$address_of_insured_person</td>
+        </tr>
+      </table>
+    </div>
+    <div class="section">
+      <p style="font-size: 10px">
+        I hereby declare that the above particulars have been given by me and
+        are correct to the best of my knowledge and I belief. I also under
+        take to intimate to the corporation any change in the membership of my
+        family within 15 days of such change having occured.
+      </p>
+      <p style="font-size: 10px">Counter Signature of the Employer</p>
+      <div class="signature-section">
+        <div style="font-size: 10px">Signature with Seal</div>
+        <div style="font-size: 10px">Signature / T.I. of I P</div>
+      </div>
+    </div>
+    <div class="section">
+      <p style="font-size: 10px">(D) FAMILY PARTICULARS OF INSURED PERSON</p>
+      <table class="form-table">
+        <tr style="text-align: center">
+          <td>Sl. No.</td>
+          <td>Name</td>
+          <td>Date of Birth</td>
+          <td>Relationship with insured person</td>
+          <td>Whether residing with him/her or not</td>
+          <td colspan="2">If No, State place of Residence</td>
+        </tr>
+        <tr style="text-align: center">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>TOWN:</td>
+          <td>STATE:</td>
+        </tr>
+        <tr style="text-align: center">
+          <td>1.</td>
+          <td>$insurance_person_name1</td>
+          <td>$insurance_person_date_of_birth1</td>
+          <td>$relationship_with_insured_person1</td>
+          <td>$resident_with_or_not1</td>
+          <td>$insurance_person_place_of_residence1</td>
+          <td>$insurance_person1_state</td>
+        </tr>
+        <tr style="text-align: center">
+          <td>2.</td>
+          <td>$insurance_person_name2</td>
+          <td>$insurance_person_date_of_birth2</td>
+          <td>$relationship_with_insured_person2</td>
+          <td>$resident_with_or_not2</td>
+          <td>$insurance_person_place_of_residence2</td>
+          <td>$insurance_person2_state</td>
+        </tr>
+        <tr style="text-align: center">
+          <td>3.</td>
+          <td>$insurance_person_name3</td>
+          <td>$insurance_person_date_of_birth3</td>
+          <td>$relationship_with_insured_person3</td>
+          <td>$resident_with_or_not3</td>
+          <td>$insurance_person_place_of_residence3</td>
+          <td>$insurance_person3_state</td>
+        </tr>
+        <tr style="text-align: center">
+          <td>4.</td>
+          <td>$insurance_person_name4</td>
+          <td>$insurance_person_date_of_birth4</td>
+          <td>$relationship_with_insured_person4</td>
+          <td>$resident_with_or_not4</td>
+          <td>$insurance_person_place_of_residence4</td>
+          <td>$insurance_person4_state</td>
+        </tr>
+        <tr style="text-align: center">
+          <td>5.</td>
+          <td>$insurance_person_name5</td>
+          <td>$insurance_person_date_of_birth5</td>
+          <td>$relationship_with_insured_person5</td>
+          <td>$resident_with_or_not5</td>
+          <td>$insurance_person_place_of_residence5</td>
+          <td>$insurance_person5_state</td>
+        </tr>
+        <tr style="text-align: center">
+          <td>6.</td>
+          <td>$insurance_person_name6</td>
+          <td>$insurance_person_date_of_birth6</td>
+          <td>$relationship_with_insured_person6</td>
+          <td>$resident_with_or_not6</td>
+          <td>$insurance_person_place_of_residence6</td>
+          <td>$insurance_person6_state</td>
+        </tr>
+        <tr style="text-align: center">
+          <td>7.</td>
+          <td>$insurance_person_name7</td>
+          <td>$insurance_person_date_of_birth7</td>
+          <td>$relationship_with_insured_person7</td>
+          <td>$resident_with_or_not7</td>
+          <td>$insurance_person_place_of_residence7</td>
+          <td>$insurance_person7_state</td>
+        </tr>
+      </table>
+    </div>
+    <div class="row">
+      <div style="width: 60%">
+        <p style="font-size: 9px; text-align: center">
+          ESI CORPORATION<br />
+          Temporary Identity Card
+        </p>
+        <table class="form-table">
+          <tr>
+            <td>Name</td>
+            <td colspan="3">$candidate_name</td>
+          </tr>
+          <tr>
+            <td>Ins. No</td>
+            <td style="width: 25%">$insurance_number</td>
+            <td style="width: 25%">Date of Entry</td>
+            <td style="width: 25%">$date_of_entry</td>
+          </tr>
+          <tr>
+            <td>Father's<br />/ Husband's Name</td>
+            <td style="width: 25%">$father_or_husband_name</td>
+            <td style="width: 25%">Date of Birth</td>
+            <td style="width: 25%">$DOB</td>
+          </tr>
+          <tr>
+            <td>Branch Office</td>
+            <td style="width: 25%">$branch_office</td>
+            <td style="width: 25%">Dispensary</td>
+            <td style="width: 25%">$dispensery</td>
+          </tr>
+          <tr>
+            <td>
+              Name, Address &<br />
+              Code No. of the<br />
+              employer
+            </td>
+            <td colspan="3">
+              $name_address_of_employer
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div style="width: 40%">
+        <p style="font-size: 9px; text-align: center">
+          Valid for 3 months from the date of appointment
+        </p>
+        <table>
+          <tr>
+            <td>
+              <div style="
+                    height: 60px;
+                    width: 120px;
+                    border: 1px solid black;
+                    margin-top: 20px;
+                    text-align: center;
+                    margin-left: 50px;
+                    padding-top: 40px;
+                  ">
+                space for photograph
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div style="width: 30%">
+        Validity<br />
+        Dated <br />
+        $validity_date
+      </div>
+      <div style="width: 35%">Signature / T.I. of I P</div>
+      <div style="width: 35%">Signature of B.M. with Seal</div>
+    </div>
+  </div>
+</body>
+
+</html>
